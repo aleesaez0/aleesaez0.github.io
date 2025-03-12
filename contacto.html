@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contacto</title>
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- CSS personalizado -->
+    <link rel="stylesheet" href="css/style.css">
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+</head>
+
+<body>
+    <!-- Header (Navbar) -->
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-light bg-primary fixed-top">
+            <div class="container">
+                <a class="navbar-brand text-white" href="index.html">Hábitos Saludables</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav ms-auto">
+                        <li class="nav-item">
+                            <a class="nav-link text-white" href="alimentacion.html">Alimentación</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-white" href="deporte.html">Deporte</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-white" href="salud_mental.html">Salud Mental</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-white" href="formulario.html">Tu Experiencia</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-white" href="contacto.html">Contacto</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Sección de contacto -->
+    <section id="contacto" class="container py-5 mt-5">
+        <h2 class="text-center mb-4">Contáctanos</h2>
+        <form id="contactForm" action="/enviar-mensaje" method="POST">
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="mb-3">
+                        <label for="nombre" class="form-label">Nombre</label>
+                        <input type="text" class="form-control" id="nombre" name="nombre" required>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="mb-3">
+                        <label for="email" class="form-label">Correo Electrónico</label>
+                        <input type="email" class="form-control" id="email" name="email" required>
+                    </div>
+                </div>
+            </div>
+            <div class="mb-3">
+                <label for="asunto" class="form-label">Asunto</label>
+                <input type="text" class="form-control" id="asunto" name="asunto">
+            </div>
+            <div class="mb-3">
+                <label for="mensaje" class="form-label">Mensaje</label>
+                <textarea class="form-control" id="mensaje" name="mensaje" rows="4" required></textarea>
+            </div>
+            <div class="text-center">
+                <button type="submit" id="submitButton" class="btn btn-primary">Enviar</button>
+                <button type="reset" class="btn btn-secondary ms-2">Reiniciar</button>
+            </div>
+        </form>
+        
+        <!-- Popover -->
+        <div id="popoverContainer" class="position-fixed top-50 start-50 translate-middle" style="z-index: 1050; display: none;">
+            <div class="popover fade show bs-popover-top" role="tooltip" style="max-width: 300px;">
+                <div class="popover-arrow"></div>
+                <div class="popover-header">Éxito</div>
+                <div class="popover-body">El mensaje ha sido enviado correctamente.</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Acordeón de Preguntas Frecuentes -->
+    <section id="preguntas-frecuentes" class="container py-5">
+        <h2 class="text-center mb-4">Preguntas Frecuentes</h2>
+        <div class="accordion" id="accordionExample">
+            <!-- Primera pregunta -->
+            <div class="accordion-item">
+                <h2 class="accordion-header" id="headingOne">
+                    <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                        ¿Qué alimentos debo consumir para llevar una vida saludable?
+                    </button>
+                </h2>
+                <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
+                    <div class="accordion-body">
+                        Para llevar una vida saludable, es importante consumir una variedad de alimentos ricos en nutrientes, como frutas, verduras, cereales integrales, proteínas magras y grasas saludables. Evita el consumo excesivo de alimentos procesados, azúcares añadidos y grasas saturadas.
+                    </div>
+                </div>
+            </div>
+
+            <!-- Segunda pregunta -->
+            <div class="accordion-item">
+                <h2 class="accordion-header" id="headingTwo">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                        ¿Cómo puedo mantenerme motivado para hacer ejercicio regularmente?
+                    </button>
+                </h2>
+                <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
+                    <div class="accordion-body">
+                        Establecer metas claras, variar tus rutinas y encontrar una actividad que disfrutes puede ayudarte a mantenerte motivado. Además, contar con un compañero de ejercicio o un entrenador puede ser una excelente manera de mantener la constancia.
+                    </div>
+                </div>
+            </div>
+
+            <!-- Tercera pregunta -->
+            <div class="accordion-item">
+                <h2 class="accordion-header" id="headingThree">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                        ¿Es necesario tomar suplementos para estar saludable?
+                    </button>
+                </h2>
+                <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#accordionExample">
+                    <div class="accordion-body">
+                        En general, es mejor obtener los nutrientes de los alimentos que consumes. Sin embargo, si tienes deficiencias nutricionales específicas o ciertas condiciones de salud, los suplementos pueden ser útiles. Siempre es recomendable consultar con un profesional de la salud antes de comenzar a tomar suplementos.
+                    </div>
+                </div>
+            </div>
+
+            <!-- Cuarta pregunta -->
+            <div class="accordion-item">
+                <h2 class="accordion-header" id="headingFour">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+                        ¿Cuántas horas debo dormir al día?
+                    </button>
+                </h2>
+                <div id="collapseFour" class="accordion-collapse collapse" aria-labelledby="headingFour" data-bs-parent="#accordionExample">
+                    <div class="accordion-body">
+                        Los adultos deben dormir entre 7 y 9 horas al día para mantener una buena salud. Sin embargo, las necesidades de sueño pueden variar dependiendo de la edad, la actividad física y el bienestar general de la persona.
+                    </div>
+                </div>
+            </div>
+
+            <!-- Quinta pregunta -->
+            <div class="accordion-item">
+                <h2 class="accordion-header" id="headingFive">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFive" aria-expanded="false" aria-controls="collapseFive">
+                        ¿Cómo reducir el estrés en mi vida diaria?
+                    </button>
+                </h2>
+                <div id="collapseFive" class="accordion-collapse collapse" aria-labelledby="headingFive" data-bs-parent="#accordionExample">
+                    <div class="accordion-body">
+                        Puedes reducir el estrés mediante técnicas de relajación como la meditación, respiración profunda, yoga, y pasando tiempo con seres queridos. Establecer límites en tu trabajo y tener tiempo para ti mismo también son importantes para gestionar el estrés de manera efectiva.
+                    </div>
+                </div>
+            </div>
+
+            <!-- Sexta pregunta -->
+            <div class="accordion-item">
+                <h2 class="accordion-header" id="headingSix">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSix" aria-expanded="false" aria-controls="collapseSix">
+                        ¿Qué tipo de ejercicios son mejores para la salud mental?
+                    </button>
+                </h2>
+                <div id="collapseSix" class="accordion-collapse collapse" aria-labelledby="headingSix" data-bs-parent="#accordionExample">
+                    <div class="accordion-body">
+                        Los ejercicios cardiovasculares, como caminar, correr o nadar, pueden ser muy beneficiosos para la salud mental, ya que liberan endorfinas que ayudan a reducir el estrés y la ansiedad. Además, el yoga y la meditación también son excelentes para calmar la mente.
+                    </div>
+                </div>
+            </div>
+
+            <!-- Séptima pregunta -->
+            <div class="accordion-item">
+                <h2 class="accordion-header" id="headingSeven">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSeven" aria-expanded="false" aria-controls="collapseSeven">
+                        ¿Cómo puedo mejorar mi digestión?
+                    </button>
+                </h2>
+                <div id="collapseSeven" class="accordion-collapse collapse" aria-labelledby="headingSeven" data-bs-parent="#accordionExample">
+                    <div class="accordion-body">
+                        Mantener una dieta rica en fibra, beber suficiente agua y evitar alimentos procesados o con alto contenido de grasa son clave para mejorar la digestión. También es importante realizar ejercicio regularmente para ayudar al sistema digestivo.
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- JavaScript personalizado para el Popover y formulario -->
+    <script>
+        // Función para mostrar el popover
+        function showPopover() {
+            const popoverContainer = document.getElementById('popoverContainer');
+            popoverContainer.style.display = 'block';
+
+            setTimeout(function() {
+                popoverContainer.style.display = 'none';
+            }, 1000); // Ocultar el popover después de 1 segundo
+        }
+
+        // Manejo del envío del formulario
+        document.getElementById('contactForm').addEventListener('submit', function(event) {
+            event.preventDefault(); // Prevenir el envío del formulario para demostrar el popover
+
+            // Verificar si todos los campos requeridos están completos
+            if (document.getElementById('nombre').value && document.getElementById('email').value && document.getElementById('mensaje').value) {
+                showPopover(); // Mostrar el popover si todo está correcto
+            }
+        });
+    </script>
+
+</body>
+
+<!-- Footer con Información de Contacto, Encuéntranos y Síguenos -->
+<footer class="bg-dark text-white py-4">
+    <div class="container">
+        <div class="row">
+            <!-- Información de Contacto (Izquierda) -->
+            <div class="col-md-4 text-center">
+                <h5>Información de Contacto</h5>
+                <p><strong>Teléfono:</strong> +34 123 456 789</p>
+                <p><strong>Correo electrónico:</strong> contacto@alimentacionysalud.com</p>
+                <p><strong>Dirección:</strong> Calle Betis, 1, Sevilla, España</p>
+            </div>
+
+            <!-- Encuéntranos con Mapa (Centro) -->
+            <div class="col-md-4 text-center">
+                <h5>Encuéntranos</h5>
+                <div class="embed-responsive embed-responsive-16by9">
+                    <iframe class="embed-responsive-item"
+                        src="https://www.google.com/maps/embed?pb=...tu_codigo_aqui..." allowfullscreen=""
+                        loading="lazy"></iframe>
+                </div>
+            </div>
+
+            <!-- Síguenos (Derecha) -->
+            <div class="col-md-4 text-center">
+                <h5>Síguenos</h5>
+                <a href="#" class="btn btn-outline-light btn-sm me-2"><i class="bi bi-facebook"></i> Facebook</a>
+                <a href="#" class="btn btn-outline-light btn-sm me-2"><i class="bi bi-twitter"></i> Twitter</a>
+                <a href="#" class="btn btn-outline-light btn-sm me-2"><i class="bi bi-instagram"></i> Instagram</a>
+            </div>
+        </div>
+    </div>
+</footer>
+
+</html>
